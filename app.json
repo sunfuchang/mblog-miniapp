@@ -1,26 +1,49 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/category/category",
+    "pages/user/user",
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#6e9aeb",
     "navigationBarTitleText": "首页",
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "navigationStyle": "default",
     "enablePullDownRefresh": true,
     "backgroundColor": "#eee"
   },
   "tabBar": {
+    "color": "#000",
+    "selectedColor": "#6e9aeb",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "position": "bottom",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "./image/home.png",
+        "selectedIconPath": "./image/home1.png"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "./image/category.png",
+        "selectedIconPath": "./image/category1.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "./image/user.png",
+        "selectedIconPath": "./image/user1.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "./image/about.png",
+        "selectedIconPath": "./image/about1.png"
       }
     ]
   },
@@ -28,5 +51,5 @@
     "request": 10000,
     "downloadFile": 10000
   },
-  "debug": true
+  "debug": false
 }
