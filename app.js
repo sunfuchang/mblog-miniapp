@@ -1,7 +1,9 @@
 //app.js
 App({
-  // 小程序启动后触发
-  onLaunch: function () {
+  // =================生命周期函数=================
+  // 小程序初始化完成后触发，仅一次，page未生成
+  onLaunch: function (params) {
+    console.log(params);
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -34,6 +36,23 @@ App({
       }
     })
   },
+  // 启动或从后台进入前台时触发
+  onShow: function (params) {
+    console.log('onShow : ' + params.path);
+  },
+  // 前台进入后台时触发
+  onHide: function () {
+    console.log('onHide');
+  },
+  // 错误监听，脚本错误或api调用失败触发
+  onError: function (msg) {
+    console.error("onError:" + msg);
+  },
+  onPageNotFound: function (path) {
+    console.log("onPageNotFound : " + path);
+  },
+  // =================自定义函数或数据=================
+  // 通过this访问
   globalData: {
     userInfo: null
   }

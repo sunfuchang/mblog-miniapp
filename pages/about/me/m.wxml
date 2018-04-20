@@ -1,0 +1,4 @@
+<!--pages/about/me/m.wxml-->
+<text>pages/about/me/m.wxml</text>
+<view>{{pages}}</view>
+<button bindtap="getCurPages"> getCurrentPages </button>
